@@ -14,7 +14,7 @@ Build a product listing interface that efficiently loads data, supports inline e
 
 ### Key Requirements Covered
 - Infinite scrolling using browser APIs
-- Editable UI elements with keyboard accessibility
+- Editable UI elements with keyboard accessibility 
 - Responsive layout
 - Proper loading and error handling
 - Clean and modular React code
