@@ -9,33 +9,9 @@
       }
     }
   ],
-  "headers": [
-    {
-      "source": "/(.*)\\.glb$",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "model/gltf-binary"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)\\.gltf$",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "model/gltf+json"
-        }
-      ]
-    }
-  ],
   "rewrites": [
     {
-      "source": "/((?!assets/|.*\\..*).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
