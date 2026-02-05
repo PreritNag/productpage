@@ -51,7 +51,7 @@ http://localhost:5173 (or the port shown in the terminal)
 
 ## 📁 Project Structure
 ```bash
-vs-assessment/
+productpage/
 ├── src/
 │   ├── Components/
 │   │   ├── ProductTable.css      # Table styling
@@ -145,8 +145,8 @@ MIT License – Open source and free to use.
 ## 🔗 Submission Links
 
 - **GitHub Repository**  
-  https://github.com/PreritNag/vs-assessment
+  https://github.com/PreritNag/productpage
 
 - **Live Demo**  
-  https://product-catalog-vs-assessment.vercel.app
+  https://productpage-seven-tau.vercel.app/
 
