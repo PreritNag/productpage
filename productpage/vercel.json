@@ -1,7 +1,42 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.glb$",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "model/gltf-binary"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.gltf$",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "model/gltf+json"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!assets/|.*\\..*).*)",
+      "destination": "/index.html"
+    }
   ]
 }
